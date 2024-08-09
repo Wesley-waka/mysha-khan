@@ -60,16 +60,20 @@
       </div>
     </section>
 
-    <div class="flex flex-row p-4 gap-4 justify-center">
-      <section class="services">
-        <h3 class="flex justify-center text-[30px] font-bold text-gray-900">Services</h3>
-        <div class="flex flex-row p-4 gap-4 justify-center">
-          <Card v-for="service in services" :key="service.id" style="width: 25rem; overflow: hidden" @click="openModal(service)">
+    <div class="flex flex-col md:flex-row p-4 gap-4 justify-center">
+      <section class="services w-full">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">Services</h3>
+        <div class="flex flex-col md:flex-row p-4 gap-4 justify-center">
+          <Card v-for="service in services" :key="service.id" class="w-full md:w-80 lg:w-96 overflow-hidden" @click="openModal(service)">
             <template #header>
-              <img :alt="service.title" :src="service.image" />
+              <img :alt="service.title" :src="service.image" class="w-full h-48 object-cover" />
             </template>
-            <template #title>{{ service.title }}</template>
-            <template #subtitle>{{ service.subtitle }}</template>
+            <template #title>
+              <h4 class="text-xl font-semibold">{{ service.title }}</h4>
+            </template>
+            <template #subtitle>
+              <h5 class="text-lg font-medium">{{ service.subtitle }}</h5>
+            </template>
             <template #content>
               <p class="m-0">{{ service.description }}</p>
             </template>
@@ -80,12 +84,12 @@
             </template>
           </Card>
         </div>
-
+    
         <!-- Dialog Modal -->
         <Dialog v-model:visible="visible" modal header="Service Details" :style="{ width: '90%', maxWidth: '600px' }">
-          <img :src="selectedService.image" alt="Service Image" class="w-full mb-4" />
-          <h3>{{ selectedService.title }}</h3>
-          <h4>{{ selectedService.subtitle }}</h4>
+          <img :src="selectedService.image" alt="Service Image" class="w-full mb-4 h-48 object-cover" />
+          <h3 class="text-2xl font-bold">{{ selectedService.title }}</h3>
+          <h4 class="text-xl font-medium">{{ selectedService.subtitle }}</h4>
           <p>{{ selectedService.description }}</p>
           <div class="flex justify-end gap-2 mt-4">
             <Button type="button" label="Close" severity="secondary" @click="visible = false" />
@@ -93,6 +97,7 @@
         </Dialog>
       </section>
     </div>
+    
 
     <div class="pb-8">
       <section class="testimonials">
@@ -117,25 +122,25 @@
       </section>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 bg-green-700 text-white px-4 py-8">
-      <div class="mb-6 sm:mb-0 text-white">
-        <h2 class="font-bold text-lg mb-3 text-white">Shop Categories</h2>
-        <p class="mb-2 text-white">Office Furniture</p>
-        <p class="mb-2 text-white">Home office Furniture</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 bg-green-700 !text-white px-4 py-8">
+      <div class="flex flex-col mb-6 sm:mb-0 items-start">
+        <h2 class="font-bold text-lg mb-3 !text-white">Shop Categories</h2>
+        <p class="mb-2 !text-white">Office Furniture</p>
+        <p class="mb-2 !text-white">Home Office Furniture</p>
       </div>
-      <div class="mb-6 sm:mb-0 text-white">
-        <h3 class="font-bold text-lg mb-3 text-white">Useful Links</h3>
-        <p class="mb-2 text-white">Designs</p>
-        <p class="mb-2 text-white">Careers</p>
+      <div class="flex flex-col mb-6 sm:mb-0 items-start">
+        <h3 class="font-bold text-lg mb-3 !text-white">Useful Links</h3>
+        <p class="mb-2 !text-white">Designs</p>
+        <p class="mb-2 !text-white">Careers</p>
       </div>
-      <div class="mb-6 sm:mb-0 text-white">
-        <h3 class="font-bold text-lg mb-3 text-white">Account</h3>
-        <p class="mb-2 text-white">Login</p>
-        <p class="mb-2 text-white">Cart</p>
+      <div class="flex flex-col mb-6 sm:mb-0 items-start">
+        <h3 class="font-bold text-lg mb-3 !text-white">Account</h3>
+        <p class="mb-2 !text-white">Login</p>
+        <p class="mb-2 !text-white">Cart</p>
       </div>
-      <div>
-        <h3 class="font-bold text-lg mb-3 text-white">About Company</h3>
-        <p class="mb-2 text-white">Our Partners</p>
+      <div class="flex flex-col items-start">
+        <h3 class="font-bold text-lg mb-3 !text-white">About Company</h3>
+        <p class="mb-2 !text-white">Our Partners</p>
       </div>
     </div>
     
@@ -188,21 +193,21 @@ const services = [
     title: 'Property Management',
     subtitle: 'Find a house to rent',
     description: 'Comprehensive management of rental properties including maintenance and tenant relations.',
-    image: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg',
+    image: 'https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg',
   },
   {
     id: 2,
     title: 'Tenant Placement',
     subtitle: 'Find a house to rent',
     description: 'Finding and placing qualified tenants for your rental properties.',
-    image: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg',
+    image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg',
   },
   {
     id: 3,
     title: 'Market Analysis',
     subtitle: 'Find a house to rent',
     description: 'Detailed market analysis to help you set competitive rental prices and attract more tenants.',
-    image: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg',
+    image: 'https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg',
   },
 ];
 
@@ -219,21 +224,21 @@ const houses = [
     title: 'Modern Apartment',
     location: 'San Francisco',
     description: 'A modern apartment with stunning city views.',
-    image: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg',
+    image: 'https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg',
   },
   {
     id: 3,
     title: 'Spacious Villa',
     location: 'Los Angeles',
     description: 'A spacious villa with a large garden.',
-    image: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg',
+    image: 'https://images.pexels.com/photos/5997994/pexels-photo-5997994.jpeg',
   },
   {
     id: 4,
     title: 'Chic Studio',
     location: 'Chicago',
     description: 'A chic studio in the vibrant city of Chicago.',
-    image: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg',
+    image: 'https://images.pexels.com/photos/8082559/pexels-photo-8082559.jpeg',
   },
   {
     id: 5,
