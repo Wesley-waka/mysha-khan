@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-custom-image bg-cover bg-center h-screen text-white bg-transparent">
-    <div class="mx-auto px-4">
+  <div class="bg-custom-image bg-cover bg-center h-screen text-white bg-transparent ">
+    <div class="mx-auto px-4 bg-custom-image bg-cover bg-center h-screen">
       <div>
         <div class="flex justify-between items-center h-16 bg-transparent">
           <!-- Hamburger menu for small screens -->
@@ -62,6 +62,7 @@
 
     <div class="flex flex-row p-4 gap-4 justify-center">
       <section class="services">
+        <h3 class="flex justify-center text-[30px] font-bold text-gray-900">Services</h3>
         <div class="flex flex-row p-4 gap-4 justify-center">
           <Card v-for="service in services" :key="service.id" style="width: 25rem; overflow: hidden" @click="openModal(service)">
             <template #header>
@@ -118,34 +119,31 @@
 
     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 bg-green-700 text-white px-4 py-8">
       <div class="mb-6 sm:mb-0 text-white">
-        <h2 class="font-bold text-lg mb-3">Shop Categories</h2>
-        <p class="mb-2">Office Furniture</p>
-        <p class="mb-2">Home office Furniture</p>
+        <h2 class="font-bold text-lg mb-3 text-white">Shop Categories</h2>
+        <p class="mb-2 text-white">Office Furniture</p>
+        <p class="mb-2 text-white">Home office Furniture</p>
       </div>
-      <div class="mb-6 sm:mb-0">
-        <h3 class="font-bold text-lg mb-3">Useful Links</h3>
-        <p class="mb-2">Designs</p>
-        <p class="mb-2">Careers</p>
+      <div class="mb-6 sm:mb-0 text-white">
+        <h3 class="font-bold text-lg mb-3 text-white">Useful Links</h3>
+        <p class="mb-2 text-white">Designs</p>
+        <p class="mb-2 text-white">Careers</p>
       </div>
-      <div class="mb-6 sm:mb-0">
-        <h3 class="font-bold text-lg mb-3">Account</h3>
-        <p class="mb-2">Login</p>
-        <p class="mb-2">Cart</p>
+      <div class="mb-6 sm:mb-0 text-white">
+        <h3 class="font-bold text-lg mb-3 text-white">Account</h3>
+        <p class="mb-2 text-white">Login</p>
+        <p class="mb-2 text-white">Cart</p>
       </div>
       <div>
-        <h3 class="font-bold text-lg mb-3">About Company</h3>
-        <p class="mb-2">Our Partners</p>
+        <h3 class="font-bold text-lg mb-3 text-white">About Company</h3>
+        <p class="mb-2 text-white">Our Partners</p>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue';
-import { Dialog } from 'primevue/dialog';
-import { Button } from 'primevue/button';
-import { Card } from 'primevue/card';
-import { InputText } from 'primevue/inputtext';
 
 const visible = ref(false);
 const isMenuOpen = ref(false);
