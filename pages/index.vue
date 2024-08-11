@@ -9,7 +9,14 @@
               <i class="pi pi-bars text-2xl"></i>
             </button>
           </div>
-
+      
+          <!-- Logo for both small and large screens -->
+          <div class="flex-shrink-0 bg-transparent lg:bg-white lg:p-2 lg:rounded-lg">
+            <NuxtLink to="/" class="flex items-center">
+              <img src="assets/images/mysha-khan.svg" alt="Sierra logo" class="h-14">
+            </NuxtLink>
+          </div>
+      
           <!-- Menu items for medium and large screens -->
           <div class="hidden md:flex items-center justify-center flex-grow bg-transparent">
             <nav class="flex gap-8 text-[20px]">
@@ -18,22 +25,23 @@
               <a href="#" class="hover:underline">Products</a>
             </nav>
           </div>
-
+      
           <div>
             <button class="bg-green-600 rounded-md p-4">Find House</button>
           </div>
         </div>
+      
+        <!-- Mobile menu -->
+        <div v-if="isMenuOpen" class="md:hidden mt-2">
+          <nav class="flex flex-col gap-4 text-[20px]">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Products</a>
+          </nav>
+        </div>
       </div>
-
-      <!-- Mobile menu -->
-      <div v-if="isMenuOpen" class="md:hidden mt-2">
-        <nav class="flex flex-col gap-4 text-[20px]">
-          <a href="#" class="hover:underline">Home</a>
-          <a href="#" class="hover:underline">About</a>
-          <a href="#" class="hover:underline">Products</a>
-        </nav>
       </div>
-    </div>
+      
 
     <section class="featured-houses">
       <h3 class="flex justify-center font-bold">Featured Houses</h3>
