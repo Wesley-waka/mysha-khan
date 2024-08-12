@@ -27,7 +27,7 @@
           </div>
       
           <div>
-            <button class="bg-green-600 rounded-md p-4">Find House</button>
+            <button class="mycol rounded-md p-4">Find House</button>
           </div>
         </div>
       
@@ -61,7 +61,7 @@
           </template>
           <template #footer>
             <div class="flex gap-4 mt-1">
-              <Button label="More Details" class="w-full" @click="openModal(house)" />
+              <Button label="More Details" class="w-full mycol" @click="openModal(house)"  />
             </div>
           </template>
         </Card>
@@ -87,7 +87,7 @@
             </template>
             <template #footer>
               <div class="flex gap-4 mt-1">
-                <Button label="View" class="w-full" @click="openModal(service)" />
+                <Button label="View" class="w-full mycol" @click="openModal(service)" />
               </div>
             </template>
           </Card>
@@ -130,7 +130,7 @@
       </section>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 bg-green-700 !text-white px-4 py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 mycol !text-white px-4 py-8">
       <div class="flex flex-col mb-6 sm:mb-0 items-start">
         <h2 class="font-bold text-lg mb-3 !text-white">Shop Categories</h2>
         <p class="mb-2 !text-white">Office Furniture</p>
@@ -332,5 +332,8 @@ p {
 
 .search-bar .p-inputtext {
   width: 100%;
+}
+.mycol{
+  background-color: rgb(158,40,41);
 }
 </style>
