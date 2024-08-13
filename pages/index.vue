@@ -130,28 +130,65 @@
       </section>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 mycol !text-white px-4 py-8">
-      <div class="flex flex-col mb-6 sm:mb-0 items-start">
-        <h2 class="font-bold text-lg mb-3 !text-white">Shop Categories</h2>
-        <p class="mb-2 !text-white">Office Furniture</p>
-        <p class="mb-2 !text-white">Home Office Furniture</p>
-      </div>
-      <div class="flex flex-col mb-6 sm:mb-0 items-start">
-        <h3 class="font-bold text-lg mb-3 !text-white">Useful Links</h3>
-        <p class="mb-2 !text-white">Designs</p>
-        <p class="mb-2 !text-white">Careers</p>
-      </div>
-      <div class="flex flex-col mb-6 sm:mb-0 items-start">
-        <h3 class="font-bold text-lg mb-3 !text-white">Account</h3>
-        <p class="mb-2 !text-white">Login</p>
-        <p class="mb-2 !text-white">Cart</p>
-      </div>
-      <div class="flex flex-col items-start">
-        <h3 class="font-bold text-lg mb-3 !text-white">About Company</h3>
-        <p class="mb-2 !text-white">Our Partners</p>
-      </div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 mycol !text-white px-4 py-8">
+  <!-- Shop Categories -->
+  <div class="flex flex-col mb-6 sm:mb-0 items-start">
+    <h2 class="font-bold text-lg mb-3 !text-white">Shop Categories</h2>
+    <p class="mb-2 !text-white">Office Furniture</p>
+    <p class="mb-2 !text-white">Home Office Furniture</p>
+  </div>
+
+  <!-- Useful Links -->
+  <div class="flex flex-col mb-6 sm:mb-0 items-start">
+    <h3 class="font-bold text-lg mb-3 !text-white">Useful Links</h3>
+    <p class="mb-2 !text-white">Designs</p>
+    <p class="mb-2 !text-white">Careers</p>
+  </div>
+
+  <!-- Account -->
+  <div class="flex flex-col mb-6 sm:mb-0 items-start">
+    <h3 class="font-bold text-lg mb-3 !text-white">Account</h3>
+    <p class="mb-2 !text-white">Login</p>
+    <p class="mb-2 !text-white">Cart</p>
+  </div>
+
+  <!-- About Company -->
+  <div class="flex flex-col items-start">
+    <h3 class="font-bold text-lg mb-3 !text-white">About Company</h3>
+    <p class="mb-2 !text-white">Our Partners</p>
+  </div>
+
+  <!-- Get in Touch -->
+  <div class="flex flex-col items-start">
+    <h3 class="font-bold text-lg mb-3 !text-white text-center">Get in Touch</h3>
+    <p class="mb-2 !text-white text-center">147 W 35th St, New York, NY 10001</p>
+    <p class="mb-2 !text-white text-center">+1 (917) 6094-597</p>
+    <p class="mb-2 !text-white text-center">
+      <a href="mailto:info@zemy-group.com" class="hover:text-gray-400">info@zemy-group.com</a>
+    </p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="mycol !text-white p-4 flex justify-center">
+  <div class="container mx-auto flex flex-wrap flex-col md:flex-row justify-between items-center">
+    <div class="text-center md:text-left mb-4 md:mb-0">
+      <p class="text-sm mb-2 !text-white">&copy; 2024 Zemy Group LLC. All Rights Reserved.</p>
+      <p class="text-sm">
+        <a href="#" class="hover:text-gray-400 !text-white">Privacy Policy</a> | 
+        <a href="#" class="hover:text-gray-400  !text-white">Terms of Service</a>
+      </p>
     </div>
-    
+    <div class="flex justify-center md:justify-end space-x-4">
+      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
   </div>
 </template>
 
