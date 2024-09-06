@@ -9,28 +9,28 @@
               <i class="pi pi-bars text-2xl"></i>
             </button>
           </div>
-      
+
           <!-- Logo for both small and large screens -->
           <div class="flex-shrink-0 bg-transparent lg:bg-white lg:p-2 lg:rounded-lg">
             <NuxtLink to="/" class="flex items-center">
               <img src="assets/images/mysha-khan.svg" alt="Sierra logo" class="h-14">
             </NuxtLink>
           </div>
-      
+
           <!-- Menu items for medium and large screens -->
           <div class="hidden md:flex items-center justify-center flex-grow bg-transparent">
             <nav class="flex gap-8 text-[20px]">
-              <a href="#" class="hover:underline">Home</a>
-              <a href="#" class="hover:underline">About</a>
+              <a href="/" class="hover:underline">Home</a>
+              <a href="/about-us" class="hover:underline">About</a>
               <a href="#" class="hover:underline">Products</a>
             </nav>
           </div>
-      
+
           <div>
             <button class="mycol rounded-md p-4">Find House</button>
           </div>
         </div>
-      
+
         <!-- Mobile menu -->
         <div v-if="isMenuOpen" class="md:hidden mt-2">
           <nav class="flex flex-col gap-4 text-[20px]">
@@ -40,8 +40,8 @@
           </nav>
         </div>
       </div>
-      </div>
-      
+    </div>
+
 
     <section class="featured-houses">
       <h3 class="flex justify-center font-bold">Featured Houses</h3>
@@ -61,7 +61,7 @@
           </template>
           <template #footer>
             <div class="flex gap-4 mt-1">
-              <Button label="More Details" class="w-full mycol" @click="openModal(house)"  />
+              <Button label="More Details" class="w-full mycol" @click="openModal(house)" />
             </div>
           </template>
         </Card>
@@ -72,7 +72,8 @@
       <section class="services w-full">
         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">Services</h3>
         <div class="flex flex-col md:flex-row p-4 gap-4 justify-center">
-          <Card v-for="service in services" :key="service.id" class="w-full md:w-80 lg:w-96 overflow-hidden" @click="openModal(service)">
+          <Card v-for="service in services" :key="service.id" class="w-full md:w-80 lg:w-96 overflow-hidden"
+            @click="openModal(service)">
             <template #header>
               <img :alt="service.title" :src="service.image" class="w-full h-48 object-cover" />
             </template>
@@ -92,7 +93,7 @@
             </template>
           </Card>
         </div>
-    
+
         <!-- Dialog Modal -->
         <Dialog v-model:visible="visible" modal header="Service Details" :style="{ width: '90%', maxWidth: '600px' }">
           <img :src="selectedService.image" alt="Service Image" class="w-full mb-4 h-48 object-cover" />
@@ -105,13 +106,14 @@
         </Dialog>
       </section>
     </div>
-    
+
 
     <div class="pb-8">
       <section class="testimonials">
         <h2 class="text-center mb-4">What Our Clients Say</h2>
         <div class="flex flex-wrap gap-4 justify-center">
-          <Card v-for="testimonial in testimonials" :key="testimonial.name" style="width: 20rem; overflow: hidden" class="testimonial-card">
+          <Card v-for="testimonial in testimonials" :key="testimonial.name" style="width: 20rem; overflow: hidden"
+            class="testimonial-card">
             <template #header>
               <img :src="testimonial.image" alt="Client Photo" class="testimonial-image" />
             </template>
@@ -130,64 +132,64 @@
       </section>
     </div>
 
-<!-- Grid Layout -->
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 mycol !text-white px-4 py-8">
-  <!-- Shop Categories -->
-  <div class="flex flex-col mb-6 sm:mb-0 items-start">
-    <h2 class="font-bold text-lg mb-3 !text-white">Shop Categories</h2>
-    <p class="mb-2 !text-white">Office Furniture</p>
-    <p class="mb-2 !text-white">Home Office Furniture</p>
-  </div>
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-8 mycol !text-white px-4 py-8">
+      <!-- Shop Categories -->
+      <div class="flex flex-col mb-6 sm:mb-0 items-start">
+        <h2 class="font-bold text-lg mb-3 !text-white">Shop Categories</h2>
+        <p class="mb-2 !text-white">Office Furniture</p>
+        <p class="mb-2 !text-white">Home Office Furniture</p>
+      </div>
 
-  <!-- Useful Links -->
-  <div class="flex flex-col mb-6 sm:mb-0 items-start">
-    <h3 class="font-bold text-lg mb-3 !text-white">Useful Links</h3>
-    <p class="mb-2 !text-white">Designs</p>
-    <p class="mb-2 !text-white">Careers</p>
-  </div>
+      <!-- Useful Links -->
+      <div class="flex flex-col mb-6 sm:mb-0 items-start">
+        <h3 class="font-bold text-lg mb-3 !text-white">Useful Links</h3>
+        <p class="mb-2 !text-white">Designs</p>
+        <p class="mb-2 !text-white">Careers</p>
+      </div>
 
-  <!-- Account -->
-  <div class="flex flex-col mb-6 sm:mb-0 items-start">
-    <h3 class="font-bold text-lg mb-3 !text-white">Account</h3>
-    <p class="mb-2 !text-white">Login</p>
-    <p class="mb-2 !text-white">Cart</p>
-  </div>
+      <!-- Account -->
+      <div class="flex flex-col mb-6 sm:mb-0 items-start">
+        <h3 class="font-bold text-lg mb-3 !text-white">Account</h3>
+        <p class="mb-2 !text-white">Login</p>
+        <p class="mb-2 !text-white">Cart</p>
+      </div>
 
-  <!-- About Company -->
-  <div class="flex flex-col items-start">
-    <h3 class="font-bold text-lg mb-3 !text-white">About Company</h3>
-    <p class="mb-2 !text-white">Our Partners</p>
-  </div>
+      <!-- About Company -->
+      <div class="flex flex-col items-start">
+        <h3 class="font-bold text-lg mb-3 !text-white">About Company</h3>
+        <p class="mb-2 !text-white">Our Partners</p>
+      </div>
 
-  <!-- Get in Touch -->
-  <div class="flex flex-col items-start">
-    <h3 class="font-bold text-lg mb-3 !text-white text-center">Get in Touch</h3>
-    <p class="mb-2 !text-white text-center">147 W 35th St, New York, NY 10001</p>
-    <p class="mb-2 !text-white text-center">+1 (917) 6094-597</p>
-    <p class="mb-2 !text-white text-center">
-      <a href="mailto:info@zemy-group.com" class="hover:text-gray-400">info@zemy-group.com</a>
-    </p>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="mycol !text-white p-4 flex justify-center">
-  <div class="container mx-auto flex flex-wrap flex-col md:flex-row justify-between items-center">
-    <div class="text-center md:text-left mb-4 md:mb-0">
-      <p class="text-sm mb-2 !text-white">&copy; 2024 Zemy Group LLC. All Rights Reserved.</p>
-      <p class="text-sm">
-        <a href="#" class="hover:text-gray-400 !text-white">Privacy Policy</a> | 
-        <a href="#" class="hover:text-gray-400  !text-white">Terms of Service</a>
-      </p>
+      <!-- Get in Touch -->
+      <div class="flex flex-col items-start">
+        <h3 class="font-bold text-lg mb-3 !text-white text-center">Get in Touch</h3>
+        <p class="mb-2 !text-white text-center">147 W 35th St, New York, NY 10001</p>
+        <p class="mb-2 !text-white text-center">+1 (917) 6094-597</p>
+        <p class="mb-2 !text-white text-center">
+          <a href="mailto:info@zemy-group.com" class="hover:text-gray-400">info@zemy-group.com</a>
+        </p>
+      </div>
     </div>
-    <div class="flex justify-center md:justify-end space-x-4">
-      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
-</footer>
+
+    <!-- Footer -->
+    <footer class="mycol !text-white p-4 flex justify-center">
+      <div class="container mx-auto flex flex-wrap flex-col md:flex-row justify-between items-center">
+        <div class="text-center md:text-left mb-4 md:mb-0">
+          <p class="text-sm mb-2 !text-white">&copy; 2024 Zemy Group LLC. All Rights Reserved.</p>
+          <p class="text-sm">
+            <a href="#" class="hover:text-gray-400 !text-white">Privacy Policy</a> |
+            <a href="#" class="hover:text-gray-400  !text-white">Terms of Service</a>
+          </p>
+        </div>
+        <div class="flex justify-center md:justify-end space-x-4">
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
 
   </div>
 </template>
@@ -356,6 +358,7 @@ h3 {
 p {
   color: #555;
 }
+
 .featured-houses {
   padding: 4rem 2rem;
   background-color: #f9f9f9;
@@ -370,7 +373,7 @@ p {
 .search-bar .p-inputtext {
   width: 100%;
 }
-.mycol{
-  background-color: rgb(158,40,41);
-}
-</style>
+
+.mycol {
+  background-color: rgb(158, 40, 41);
+}</style>
