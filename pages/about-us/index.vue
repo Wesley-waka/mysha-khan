@@ -1,42 +1,7 @@
 <template>
+    <Navbar />
     <div class="bg-custom-image bg-cover bg-center h-[820px] text-white bg-transparent">
-        <div>
-            <div class="flex justify-between items-center h-16 bg-transparent">
-                <!-- Hamburger menu for small screens -->
-                <div class="md:hidden">
-                    <button @click="isMenuOpen = !isMenuOpen" class="text-white focus:outline-none bg-transparent">
-                        <i class="pi pi-bars text-2xl"></i>
-                    </button>
-                </div>
 
-                <!-- Logo for both small and large screens -->
-                <div class="flex-shrink-0 bg-transparent lg:bg-white lg:p-2 lg:rounded-lg">
-                    <NuxtLink to="/" class="flex items-center">
-                        <img src="assets/images/mysha-khan.svg" alt="Sierra logo" class="h-14">
-                    </NuxtLink>
-                </div>
-
-                <!-- Menu items for medium and large screens -->
-                <div class="hidden md:flex items-center justify-center flex-grow bg-transparent">
-                    <nav class="flex gap-8 text-[20px]">
-                        <a href="/" class="hover:underline">Home</a>
-                        <a href="/about-us" class="hover:underline">About</a>
-                        <a href="/contact-us" class="hover:underline">Contact Us</a>
-                    </nav>
-                </div>
-
-
-            </div>
-
-            <!-- Mobile menu -->
-            <div v-if="isMenuOpen" class="md:hidden mt-2">
-                <nav class="flex flex-col gap-4 text-[20px]">
-                    <a href="#" class="hover:underline">Home</a>
-                    <a href="/about-us" class="hover:underline">About</a>
-                    <a href="/contact-us" class="hover:underline">Contact Us</a>
-                </nav>
-            </div>
-        </div>
 
 
         <div class="mx-auto px-4">
@@ -70,7 +35,7 @@
             <div>
                 <h1 class="text-[70px] leading-tight">Enjoy Quality Life in <br> Perumnas Housing</h1>
             </div>
-            <div class="lg:w-[820px] w-[400px] flex flex-col space-y-12">
+            <div class="lg:w-[820px] md:w-[400px] flex flex-col space-y-12">
                 <p class="text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt
                     ut labore et dolore
@@ -81,18 +46,18 @@
                     mollit
                     anim id est laborum.
                 </p>
-                <div class="flex space-x-6">
+                <div class="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-7">
                     <h1>
-                        <p class="text-[30px]">+100</p>
-                        <p class="text-slate-500">Units Ready</p>
+                        <p class="text-[40px]">+100</p>
+                        <p class="text-slate-500 text-[30px]">Units Ready</p>
                     </h1>
                     <h1>
-                        <p class="text-[30px]">+60K</p>
-                        <p class="text-slate-500">Customers</p>
+                        <p class="text-[40px]">+60K</p>
+                        <p class="text-slate-500 text-[30px]">Customers</p>
                     </h1>
                     <h1>
-                        <p class="text-[30px]">+70K</p>
-                        <p class="text-slate-500">Review</p>
+                        <p class="text-[40px]">+70K</p>
+                        <p class="text-slate-500 text-[30px]">Review</p>
                     </h1>
                 </div>
             </div>
@@ -106,7 +71,6 @@
             <img src="/about-hero1.jpg" class="rounded-md w-[620px]" alt="" srcset="">
 
             <img src="/hero-3.jpg" class="rounded-md w-[620px]" alt="" srcset="">
-
         </div>
     </div>
 
@@ -141,7 +105,7 @@
         <div class="flex lg:flex-row flex-col space-y-6 lg:space-y-0 lg:space-x-6 my-16">
             <div>
                 <h1 class="text-[36px] leading-tight">Find Your Dream <br> Home</h1>
-                <p class="w-[600px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum modi necessitatibus
+                <p class="lg:w-[600px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum modi necessitatibus
                     quia
                     alias exercitationem
                     sequi soluta laborum possimus porro at, impedit sunt veritatis. Cupiditate itaque fuga impedit hic
@@ -341,11 +305,11 @@
     </div>
 </template>
 
-<script>
-
+<script setup>
+import Navbar from '~/layouts/navbar.vue';
 </script>
 
-<style>
+<style scoped>
 .bg-custom-image {
     background-image: url('/hero-2.jpg');
 }

@@ -1,45 +1,8 @@
 <template>
+  <Navbar />
   <div class="bg-custom-image bg-cover bg-center h-screen text-white bg-transparent ">
     <div class="mx-auto px-4 bg-custom-image bg-cover bg-center h-screen">
-      <div>
-        <div class="flex justify-between items-center h-16 bg-transparent">
-          <!-- Hamburger menu for small screens -->
-          <div class="md:hidden">
-            <button @click="isMenuOpen = !isMenuOpen" class="text-white focus:outline-none bg-transparent">
-              <i class="pi pi-bars text-2xl"></i>
-            </button>
-          </div>
 
-          <!-- Logo for both small and large screens -->
-          <div class="flex-shrink-0 bg-transparent lg:bg-white lg:p-2 lg:rounded-lg">
-            <NuxtLink to="/" class="flex items-center">
-              <img src="assets/images/mysha-khan.svg" alt="Sierra logo" class="h-14">
-            </NuxtLink>
-          </div>
-
-          <!-- Menu items for medium and large screens -->
-          <div class="hidden md:flex items-center justify-center flex-grow bg-transparent">
-            <nav class="flex gap-8 text-[20px]">
-              <a href="/" class="hover:underline">Home</a>
-              <a href="/about-us" class="hover:underline">About</a>
-              <a href="#" class="hover:underline">Products</a>
-            </nav>
-          </div>
-
-          <div>
-            <button class="mycol rounded-md p-4">Find House</button>
-          </div>
-        </div>
-
-        <!-- Mobile menu -->
-        <div v-if="isMenuOpen" class="md:hidden mt-2">
-          <nav class="flex flex-col gap-4 text-[20px]">
-            <a href="#" class="hover:underline">Home</a>
-            <a href="#" class="hover:underline">About</a>
-            <a href="#" class="hover:underline">Products</a>
-          </nav>
-        </div>
-      </div>
     </div>
 
 
@@ -196,6 +159,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import Navbar from '~/layouts/navbar.vue';
 
 const visible = ref(false);
 const isMenuOpen = ref(false);
@@ -376,4 +340,5 @@ p {
 
 .mycol {
   background-color: rgb(158, 40, 41);
-}</style>
+}
+</style>
