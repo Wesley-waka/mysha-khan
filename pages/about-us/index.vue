@@ -211,8 +211,8 @@
 
                         <p
                             class="text-xl font-medium italic text-gray-800 md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-800">
-                            To say that switching to Preline has been life-changing is an understatement. My business has
-                            tripled and I got my life back.
+                            Working with Mysha Khan LLC was a fantastic experience. They helped us find our dream home
+                            quickly and efficiently.
                         </p>
                     </div>
 
@@ -226,7 +226,7 @@
                             <div class="ms-4 md:ms-0">
                                 <div class="text-base font-semibold text-gray-800 dark:text-neutral-900">Nicole Grazioso
                                 </div>
-                                <div class="text-xs text-gray-900 dark:text-neutral-600">Director Payments & Risk | Airbnb
+                                <div class="text-xs text-gray-900 dark:text-neutral-600">Director Payments & Risk
                                 </div>
                             </div>
                         </div>
