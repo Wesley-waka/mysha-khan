@@ -12,6 +12,7 @@
         <InputText v-model="searchQuery" placeholder="Search houses..." class="w-full" />
       </div>
 
+      <!-- done -->
       <div class="flex flex-wrap gap-4 justify-center mt-4">
         <Card v-for="house in filteredHouses" :key="house.id" style="width: 25rem; overflow: hidden">
           <template #header>
